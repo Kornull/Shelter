@@ -1,6 +1,6 @@
 # Shelder
 
-this project is landing. Completed as part of studies at the ***[RS School](https://rs.school)***
+This project is landing. Completed as part of studies at the ***[RS School](https://rs.school)***
 
 ## Screenshot:
 ![Shelter1](https://user-images.githubusercontent.com/96052707/200622129-d8fb0351-8548-4bd3-b43e-b8a9bcdd5262.png)
