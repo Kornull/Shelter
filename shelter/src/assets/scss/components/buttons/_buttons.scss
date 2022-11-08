@@ -1,0 +1,69 @@
+.btn {
+  display: block;
+  width: 207px;
+  height: 52px;
+  background-color: $colorprimary;
+  color: $colorgray-dark-xx;
+  @include fontGeorgia;
+  font-size: $fontsizebtn;
+  letter-spacing: 1.2px;
+  border-radius: 100px;
+  transition: background-color 0.2s ease-in;
+  &:hover {
+    background-color: $colorprimary-light;
+  }
+  &__white {
+    width: 187px;
+    background: #ffffff00;
+    text-align: center;
+    border: 2px solid $colorprimary-light;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1.2px;
+  }
+  &__pets {
+    width: 261px;
+    height: 52px;
+    margin-bottom: 100px;
+    @media(max-width:767px){
+      margin-bottom: 41px;
+    }
+  }
+
+  &__left,&__right {
+    position: absolute;
+    content: "";
+    width: 52px;
+    height: 52px;
+    top: 193px;
+    border-radius: 100px;
+    background: #ffffff00;
+    text-align: center;
+    border: 2px solid $colorprimary-light;
+    @media (max-width:1279px) {
+      top:191px
+    }
+    @media (max-width:560px) {
+      top:455px
+    }
+
+  }
+  &__left {
+    left: 0px;
+    @media (max-width:767px) {
+      left:57px;
+    }
+  }
+  &__right{
+    right: 0px;
+    @media (max-width:767px) {
+      right:57px;
+    }
+  }
+}
+
+.btn--start {
+  @media (max-width: 1279px) {
+    margin: 0 auto;
+  }
+}

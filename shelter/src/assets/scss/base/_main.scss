@@ -1,0 +1,20 @@
+.main{
+  width: 100%;
+  height: auto;
+  color: $colorwhite;
+  margin-top: -180px;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(90deg, #5B483A 0%, #262425 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(90deg, #5B483A, #262425 100% 100%);
+
+  // /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262425', endColorstr='#5B483A', GradientType=0 );
+
+  // /* ie 10+ */
+  background: -ms-linear-gradient(90deg, #5B483A 0%, #262425 100%);
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(90deg,#5B483A 0%, #262425 100%);
+}

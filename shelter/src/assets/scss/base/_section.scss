@@ -1,0 +1,15 @@
+section {
+  width: 100%;
+}
+.section__title {
+  @include fontGeorgia;
+  font-size: $fontsizetitle;
+  color: $colorgray-dark-l;
+  margin-top: 18px;
+  @media (max-width:767px) {
+    width: 80%;
+    margin: 18px auto 0;
+  }
+}
+
+

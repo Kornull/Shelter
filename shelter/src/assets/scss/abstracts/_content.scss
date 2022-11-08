@@ -1,0 +1,27 @@
+.container__start {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+
+}
+.container {
+  margin:0 auto;
+  width: 100%;
+  max-width: 1200px;
+  &__help {
+    margin-bottom: 45px;
+    @media (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
+  @media (max-width: 1279px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 10px;
+  }
+}
+.title {
+  @include fontGeorgia;
+  color: $colorgray-dark-l;
+}

@@ -1,0 +1,107 @@
+.donation {
+  @include fontGeorgia;
+  color: $colorgray-dark-l;
+  background-color: $colorgray-light-l;
+  &__content {
+    @include flexHeader;
+    column-gap: 30px;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 80px;
+    width: 100%;
+    max-width: 915px;
+    padding-top: 66px;
+    padding-bottom: 90px;
+    margin: 0 auto;
+    @media (max-width: 1279px) {
+      justify-content: center;
+      padding-bottom: 100px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 26px;
+      padding-bottom: 41px;
+    }
+  }
+  &__img {
+    width: 56%;
+    max-width: 505px;
+    margin-top: 5px;
+    @media (max-width: 1279px) {
+      width: 100%;
+      margin-top: 50px;
+    }
+    @media(max-width:767px){
+      width: 89%;
+      margin-top: 29px;
+    }
+  }
+  &__pay {
+    width: 42%;
+    max-width: 380px;
+    @media (max-width: 1279px) {
+      width: 100%;
+    }
+  }
+  &__title {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 18px;
+    @media (max-width: 767px) {
+      text-align: center;
+      width: 75%;
+      margin-bottom: 22px;
+    }
+  }
+  &__subtitle {
+    font-size: $fontsizeall;
+    letter-spacing: 0.9px;
+    margin-bottom: 17px;
+    @media (max-width: 767px) {
+      letter-spacing: 0;
+      text-align: center;
+      margin-bottom: 22px;
+    }
+  }
+  &__card {
+    @include flexHeader;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 348px;
+    height: 43px;
+    font-size: 20px;
+    background-color: $colorprimary;
+    border-radius: 10px;
+    margin-bottom: 21px;
+    transition: background-color 0.2s linear;
+    &:hover {
+      background-color: $colorprimary-light;
+    }
+    @media (max-width: 767px) {
+      width: 281px;
+      height: 43px;
+      font-size: 15px;
+      margin: 0 auto;
+      margin-bottom: 22px;
+    }
+  }
+  &__number {
+    color: $colorgray-dark-l;
+    padding-left: 50px;
+    letter-spacing: 1.2px;
+    @media (max-width: 767px) {
+      letter-spacing: 0.06em;
+    }
+  }
+  &__descr {
+    @include fontArial;
+    color: $colorgray-dark-w;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.5;
+    @media(max-width:767px){
+      width: 94%;
+      text-align:justify;
+    margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+/* Navigation Header
+========================= */
+.header__nav {
+  width: 443px;
+  @media (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background: #292929;
+    transition: right 0.3s linear, display 5s linear;
+    overflow: auto;
+    z-index: 600;
+  }&.white__color{
+    background: white;
+  }
+  &.active {
+    right: 0;
+  }
+
+}
+.nav {
+  height: 27px;
+  @media (max-width: 767px) {
+    display: none;
+    width: 100%;
+  }
+  &.active {
+    display: block;
+  }
+}
+.list__nav {
+  @include flexHeader;
+  gap: 35px;
+  @media (max-width: 767px) {
+    position: relative;
+    flex-direction: column;
+    gap: 47.5px;
+    font-size: 32px;
+    padding-top: 252px;
+    z-index: 500;
+  }
+}
+.nav__link {
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+  &.active {
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: -5px;
+      left: 0;
+      background-color: $colorprimary;
+    }
+  }
+}
+.link {
+  color: $colornav-main;
+  transition: color 0.2s linear;
+  &:hover {
+    color: $colorwhite;
+  }
+}
+.link--our {
+  color: $colorgray-dark-l;
+  &:hover {
+    color: $colorgray-dark-xx;
+  }
+}
+.active--link-our {
+  color: $colorgray-dark-xx;
+}
+.active--link {
+  color: $colorwhite;
+}

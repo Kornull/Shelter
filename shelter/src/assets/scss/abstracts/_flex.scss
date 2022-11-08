@@ -1,0 +1,10 @@
+@mixin flexHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexaround {
+  display: flex;
+  justify-content: space-around;
+}
