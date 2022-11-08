@@ -22,4 +22,4 @@ To launch the application, follow this ***[link](https://kornull.github.io/Shelt
 ---
 Task ***[link](https://github.com/rolling-scopes-school/tasks/tree/master/stage1/stream1/shelter#%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D1%8F-3)***
 
----
+--
