@@ -15,7 +15,7 @@ This project is landing. Completed as part of studies at the ***[RS School](http
 * ### *Html*
 
 ---
-The history of commits and development process can be found ***[here](https://github.com/Kornull/RS-School-tasks/tree/shelter)***
+The history of commits and development process can be found ***[here](https://github.com/Kornull/RS-School-tasks/pull/1)***
 
 To launch the application, follow this ***[link](https://kornull.github.io/Shelter/shelter/shelter/index.html)***. You don't have to install anything extra!
 
