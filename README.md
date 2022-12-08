@@ -8,7 +8,7 @@ This project is landing. Completed as part of studies at the ***[RS School](http
 ---
 ![Shelter2](https://user-images.githubusercontent.com/96052707/200622143-eaaad4c6-3d0e-4ea4-bac5-6575f69adceb.png)
 
-## Thechnology: 
+## Technology: 
 * ### *Webpack* 
 * ### *JavaScript* 
 * ### *SCSS*
