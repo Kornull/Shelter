@@ -3,22 +3,18 @@ import { popurRun } from './popup.js';
 
 const blockPagination = document.querySelector('.slide__pagination');
 const BUTNS = document.querySelector('.btns__slider-pets');
-const pagBlocks = document.querySelectorAll('.pagination__block');
+const pageBlocks = document.querySelectorAll('.pagination__block');
 const numberStr = document.querySelector('.num__page-slider');
-const btnR = BUTNS.querySelector('.pets--right');
-const btnAllR = BUTNS.querySelector('.pets--all__right');
-const btnL = document.querySelector('.pets--left');
-const btnAllL = document.querySelector('.pets--left__all');
 const arrName = [];
 const arrDesctop2 = [];
 let count = 0;
-let allPagBtns;
 
-if (BUTNS) {
-  allPagBtns = BUTNS.querySelectorAll('.btn__our-pets');
-}
-
-function paginationNumbers(counts) {
+function paginationNumbers() {
+  const allPagBtns = BUTNS.querySelectorAll('.btn__our-pets');
+  const btnR = BUTNS.querySelector('.pets--right');
+  const btnAllR = BUTNS.querySelector('.pets--all__right');
+  const btnL = BUTNS.querySelector('.pets--left');
+  const btnAllL = BUTNS.querySelector('.pets--left__all');
   BUTNS.addEventListener('click', (ev) => {
     if (ev.target.className === 'btn__our-pets pets--right') {
       numberStr.innerHTML = +numberStr.textContent + 1;
@@ -79,55 +75,58 @@ function paginationNumbers(counts) {
     }
   });
 }
-function newArrNames() {
-  pagBlocks.forEach((x) =>
+
+(function () {
+  pageBlocks.forEach((x) =>
     arrName.push(x.querySelector('.our__pets--slider').textContent)
   );
-}
-newArrNames();
+})();
+
 function lengthArrs(x) {
   if (x === 6) count = 8;
   else if (x === 8) count = 6;
   else if (x === 16) count = 3;
   for (let i = 0; i < x; i++) {
-    let ar = [];
-    let ra = [];
-    while (ar.length < count) {
+    let preArrayPets = [];
+    let newArrayPet = [];
+    while (preArrayPets.length < count) {
       let ob = {};
       let num = Math.floor(Math.random() * 8);
-      if (!ar.includes(arrName[num])) {
+      if (!preArrayPets.includes(arrName[num])) {
         for (let j of obj) {
           if (arrName[num] === j.name) {
-            ar.push(arrName[num]);
+            preArrayPets.push(arrName[num]);
             ob = {
               name: j.name,
               img: `.${j.img}`,
             };
-            ra.push(ob);
+            newArrayPet.push(ob);
           }
         }
       }
     }
-    arrDesctop2.push(ra);
+    arrDesctop2.push(newArrayPet);
   }
-  paginationNumbers(arrDesctop2.length);
+  paginationNumbers();
 }
 
 (function () {
-  if (window.innerWidth > 1279) {
-    lengthArrs(6);
-  }
-  if (window.innerWidth < 1280 && window.innerWidth > 767) {
-    lengthArrs(8);
-    pagBlocks.forEach((x, y) => {
-      if (y > 5) x.remove('div');
-    });
-  }
-  if (window.innerWidth < 768) {
-    lengthArrs(16);
-    pagBlocks.forEach((x, y) => {
-      if (y > 2) x.remove('div');
-    });
+  if (BUTNS) {
+    if (window.innerWidth > 1279) {
+      lengthArrs(6);
+    }
+    if (window.innerWidth < 1280 && window.innerWidth > 767) {
+      lengthArrs(8);
+      pageBlocks.forEach((x, y) => {
+        if (y > 5) x.remove('div');
+      });
+    }
+    if (window.innerWidth < 768) {
+      lengthArrs(16);
+      pageBlocks.forEach((x, y) => {
+        if (y > 2) x.remove('div');
+      });
+    }
   }
 })();
 
@@ -161,4 +160,4 @@ function pageCards(page) {
   }
 }
 
-pageCards(1);
+if (BUTNS) pageCards(1);
